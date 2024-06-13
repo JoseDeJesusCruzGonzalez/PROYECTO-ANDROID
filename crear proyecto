@@ -1,0 +1,25 @@
+Por ejemplo:
+
+Show Diff
+public class Main {
+    public static void main(String[] args) {
+        MensajeriaInstantanea mensajeria = new MensajeriaInstantanea();
+
+        Conversacion conversacion1 = new Conversacion("Conversación 1");
+        mensajeria.agregarConversacion(conversacion1);
+
+        Mensaje mensaje1 = new Mensaje("Hola, ¿cómo estás?");
+        mensajeria.agregarMensaje(conversacion1, mensaje1);
+
+        Documento documento1 = new Documento("Documento 1", new byte[] {1, 2, 3});
+        mensajeria.agregarDocumento(conversacion1, documento1);
+
+        Proyecto proyecto1 = new Proyecto("Proyecto 1", "Descripción del proyecto 1");
+        mensajeria.agregarProyecto(conversacion1, proyecto1);
+
+        Tarea tarea1 = new Tarea("Tarea 1", "Descripción de la tarea 1");
+        mensajeria.agregarTarea(conversacion1, tarea1);
+
+        //...
+    }
+}
